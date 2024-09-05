@@ -1,0 +1,108 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Kavoon&display=swap');
+.Landing{
+    padding: 0;
+    margin: 0;
+    height: 90vh;
+    width: 98vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Container{
+    height: 530px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Card{
+    height: 100%;
+    width: 42%;
+    border-radius: 3rem;
+    background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(248, 249, 250));
+    display: flex;
+    flex-direction: row;
+}
+.formsDiv{
+    height: 100%;
+    width: 60%;
+    border-radius: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 15.95px 5.95px 35.6px;
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* LogoDiv */
+.logoDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+}
+.logoDiv > h1{
+    /* font-family: 'Black Ops One', cursive; */
+    font-family: 'Kavoon', cursive;
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+}
+.authBtn{
+    margin-top: 10px;
+}
+
+/* Media Queries */
+@media(max-width:1300px) {
+    .Card{
+        width: 60%;
+    }
+}
+@media(max-width:1100px) {
+    .Card{
+        width: 70%;
+    }
+}
+@media(max-width:900px) {
+    .Card{
+        width: 80%;
+    }
+}
+@media(max-width:800px) {
+    .Container{
+        height: 100vh;
+        flex-direction: column;
+    }
+    .Card{
+        background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(248, 249, 250));
+        flex-direction: column-reverse;
+        width: 70%;
+        justify-content: center;
+        align-items: center;
+    }
+    .formsDiv{
+        width: 90%;
+        height: 70%;
+    }
+    .logoDiv{
+        width: 100%;
+        height: 30%;
+    }
+}
+@media(max-width:600px){
+    .Card{
+        width: 90%;
+    }
+}
+@media(max-width:500px){
+    .Card{
+        width: 99%;
+    }
+}
+@media(max-height:800px){
+    .Container{
+        margin-top: 5px;
+    }
+}

@@ -1,0 +1,11 @@
+.loginForm,
+.signupForm {
+    width: 90%;
+}
+
+
+.buttonContainer {
+    display: flex;
+    justify-content: center; 
+    margin-top: 1rem; 
+}
