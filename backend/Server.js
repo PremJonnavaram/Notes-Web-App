@@ -5,6 +5,7 @@ const loginRoutes = require("./Routes/loginRoutes");
 const googleAuthRoutes = require("./Routes/googleAuthRoutes");
 const notesRoutes = require("./Routes/notesRoutes");
 const cors = require("cors");
+const path = require("path");
 require("dotenv").config();
 
 // App Initializations
@@ -17,6 +18,14 @@ app.use("/thinkers", signupRoutes);
 app.use("/login", loginRoutes);
 app.use("/googleAuth", googleAuthRoutes);
 app.use("/dashboard", notesRoutes);
+
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, "frontend/build")));
+
+// Catch-all handler to return the React app for any other routes
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "frontend/build", "index.html"));
+});
 
 // Listen
 mongoose
