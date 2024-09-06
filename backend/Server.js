@@ -17,7 +17,6 @@ app.use("/thinkers", signupRoutes);
 app.use("/login", loginRoutes);
 app.use("/googleAuth", googleAuthRoutes);
 app.use("/dashboard", notesRoutes);
-
 // Listen
 mongoose
   .connect(process.env.MONGO_URL)
