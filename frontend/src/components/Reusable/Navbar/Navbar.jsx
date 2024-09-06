@@ -8,21 +8,28 @@ import './Navbar.css'; // Import the CSS file
 
 function NavBar({ isLoggedIn, setIsLoggedIn }) {
   const navigateTo = useNavigate();
-  const { myVariable } = useMyVariable();
-  
+  let { myVariable, setMyVariable } = useMyVariable();
+
   function Logout() {
-    localStorage.removeItem("thinker"); // Clear user data from localStorage
-    setIsLoggedIn(false); // Update state
-    navigateTo("/"); // Redirect to home
+    setIsLoggedIn(false);
+    setMyVariable(""); 
+    localStorage.removeItem("thinker");
+    navigateTo("/");
   }
 
-  function handleRedirect  () {
+  function LoggedIn(){
+    console.log(myVariable);
+    return myVariable !== "";
+  }
+
+  function handleRedirect() {
     if (myVariable === "") {
       navigateTo("/");
-    }else{
+    } else {
       navigateTo("/dashboard");
     }
-  };
+  }
+
   return (
     <Navbar bg="light" expand="lg">
       <Container>
@@ -34,7 +41,7 @@ function NavBar({ isLoggedIn, setIsLoggedIn }) {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto nav-links">
             <Nav.Link href="/home">Home</Nav.Link>
-            {isLoggedIn && <Nav.Link onClick={Logout}>Logout</Nav.Link>}
+            {LoggedIn() && <Nav.Link onClick={Logout}>Logout</Nav.Link>}
           </Nav>
         </Navbar.Collapse>
       </Container>
