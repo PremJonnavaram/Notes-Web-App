@@ -20,7 +20,7 @@ export default function Card({ setIsLoggedIn }) {
   function handleCredentialResponse(response) {
     const thinker = jwt_decode(response.credential);
     axios
-      .post("http://localhost:4000/googleAuth", {
+      .post("https://notes-web-app-a7iu.onrender.com/googleAuth", {
         email: thinker.email,
         username: thinker.name,
       })
