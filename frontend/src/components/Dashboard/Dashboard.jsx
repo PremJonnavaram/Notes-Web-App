@@ -20,7 +20,7 @@ export default function Dashboard() {
 
   const getNotes = useCallback(async () => {
     axios
-      .post("http://localhost:4000/dashboard/", {
+      .post("https://notes-web-app-a7iu.onrender.com/dashboard/", {
         email: email,
       })
       .then((response) => {
@@ -38,7 +38,7 @@ export default function Dashboard() {
   function submitHandler(e) {
     e.preventDefault();
     axios
-      .post("http://localhost:4000/dashboard/add", {
+      .post("https://notes-web-app-a7iu.onrender.com/dashboard/add", {
         email: email,
         title: title,
         note: note,
@@ -120,7 +120,7 @@ export default function Dashboard() {
                 onClick={() => {
                   console.log(note._id);
                   axios
-                    .delete("http://localhost:4000/dashboard/delete", {
+                    .delete("https://notes-web-app-a7iu.onrender.com/dashboard/delete", {
                       data: {
                         id: note._id,
                       },

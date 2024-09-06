@@ -29,7 +29,7 @@ export default function Signup({ setIsLoggedIn }) {
     ) {
       if (signupPassword === signupConfirmPassword) {
         axios
-          .post("http://localhost:4000/thinkers", {
+          .post("https://notes-web-app-a7iu.onrender.com/thinkers", {
             email: signupEmail,
             username: signupUsername,
             password: signupPassword,

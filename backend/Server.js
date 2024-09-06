@@ -5,6 +5,7 @@ const loginRoutes = require("./Routes/loginRoutes");
 const googleAuthRoutes = require("./Routes/googleAuthRoutes");
 const notesRoutes = require("./Routes/notesRoutes");
 const cors = require("cors");
+const path = require("path");
 require("dotenv").config();
 
 // App Initializations
@@ -17,6 +18,7 @@ app.use("/thinkers", signupRoutes);
 app.use("/login", loginRoutes);
 app.use("/googleAuth", googleAuthRoutes);
 app.use("/dashboard", notesRoutes);
+
 // Listen
 mongoose
   .connect(process.env.MONGO_URL)

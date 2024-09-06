@@ -20,7 +20,7 @@ export default function Login({ setIsLoggedIn }) {
     e.preventDefault();
     if (loginEmail !== "" && loginPassword !== "") {
       axios
-        .post("http://localhost:4000/login", {
+        .post("https://notes-web-app-a7iu.onrender.com/login", {
           email: loginEmail,
           password: loginPassword,
         })
