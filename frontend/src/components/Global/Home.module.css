@@ -1,4 +1,4 @@
-.home-container {
+.homeContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,7 +8,7 @@
     padding: 0 20px;
   }
   
-  .home-title {
+  .homeTitle {
     font-size: 3rem;
     font-weight: bold;
     color: #333;
@@ -16,7 +16,7 @@
     text-align: center;
   }
   
-  .home-description {
+  .homeDescription {
     font-size: 1.5rem;
     color: #666;
     text-align: center;
@@ -24,15 +24,15 @@
     line-height: 1.6;
   }
   
-  .home-buttons {
+  .homeButtons {
     margin-top: 30px;
     display: flex;
     justify-content: center;
     gap: 20px;
   }
   
-  .home-create-button,
-  .home-view-button {
+  .homeCreateButton,
+  .homeViewButton {
     padding: 12px 24px;
     font-size: 1rem;
     background-color: #007bff; 
@@ -43,8 +43,8 @@
     transition: background-color 0.3s ease;
   }
   
-  .home-create-button:hover,
-  .home-view-button:hover {
+  .homeCreateButton:hover,
+  .homeViewButton:hover {
     background-color: #0056b3;
   }
   
